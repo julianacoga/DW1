@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #d8e9ff 0%, #b2d5ff 50%, #8abfff 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #0b2d5a;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.92);
+    border: 2px solid #4d85d2;
+    border-radius: 16px;
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.15);
+    width: 360px;
+    max-width: 90vw;
+    padding: 24px;
+}
+
+h1 {
+    margin-top: 0;
+    text-align: center;
+    font-size: 1.6rem;
+    color: #184c8b;
+}
+
+label {
+    display: block;
+    margin-top: 14px;
+    color: #3465a8;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    margin-top: 6px;
+    padding: 8px 10px;
+    border: 1px solid #84acf0;
+    border-radius: 10px;
+    font-size: 0.95rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: #2f68c1;
+    box-shadow: 0 0 0 3px rgba(40, 110, 198, 0.24);
+}
+
+button {
+    width: 100%;
+    margin-top: 18px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #1d6adc;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #1453a4;
+}
+
+#resultado {
+    display: block;
+    margin-top: 16px;
+    padding: 10px;
+    border: 1px solid #cbdffd;
+    border-radius: 10px;
+    background: #f0f6ff;
+    color: #123a6a;
+    min-height: 70px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    text-align: center;
+    padding: 12px 16px;
+    background: #e7f0ff;
+    color: #16467d;
+    border-top: 1px solid #bfd4f2;
+    font-weight: 600;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer.warning {
+    background-color: #c21919;
+    color: #ffffff;
+    border-color: #a51515;
+}
+

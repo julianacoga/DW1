@@ -1,0 +1,117 @@
+:root {
+    :root {
+    --azul: #be185d;       /* rosa sofisticado */
+    --azul-claro: #fce7f3; /* fundo suave */
+    --branco: #ffffff;
+    --cinza: #fdf2f8;      /* card clarinho rosado */
+    --vermelho: #dc2626;
+}
+}
+
+#labelDaAltura {
+    color: var(--vermelho);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--branco);
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #fbcfe8, #f9a8d4);
+}
+
+header {
+    background-color: var(--azul);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+section {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+h1 {
+    text-align: center;
+    color: #be185d;
+    font-size: 26px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    outline: none;
+    transition: 0.3s;
+}
+
+input[type="number"]:focus {
+    background-color: #fce7f3;
+    border-color: #ec4899;
+    box-shadow: 0 0 10px rgba(236, 72, 153, 0.3);
+}
+
+button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background: linear-gradient(135deg, #be185d, #ec4899);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(190, 24, 93, 0.4);
+}
+
+button:hover {
+    background-color: #db2777; /* rosa mais escuro no hover */
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(190, 24, 93, 0.6);
+}
+
+.resultado {
+    margin-top: 15px;
+    padding: 10px;
+    background: white;
+    border-radius: 8px;
+}
+
+footer {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cinza);
+    color: black;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+footer.erro {
+    background-color: var(--vermelho);
+    color: white;
+}

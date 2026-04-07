@@ -1,0 +1,91 @@
+body {
+  font-family: Arial;
+  margin: 0;
+  height: 100vh;
+
+  background: linear-gradient(135deg, #ff9ecf, #ffc3e6, #ffe6f5);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* título */
+h1 {
+  color: white;
+}
+
+/* cards */
+.container {
+  display: flex;
+  gap: 40px;
+}
+
+.card {
+  background: rgba(255,255,255,0.2);
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+/* pontos */
+.pontos {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* caixinhas */
+.digit {
+  width: 50px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #1a0010;
+  color: #ff4da6;
+  font-size: 35px;
+  border-radius: 10px;
+}
+
+/* botões */
+button {
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #ff4da6;
+  color: white;
+  cursor: pointer;
+}
+
+/* reset */
+.reset {
+  margin-top: 20px;
+  background: black;
+}
+
+/* histórico */
+li {
+  color: white;
+}
+
+/* 🎉 CONFETE */
+.confete {
+  position: fixed;
+  top: -10px;
+  width: 10px;
+  height: 10px;
+  animation: cair 2s linear forwards;
+  z-index: 9999;
+}
+
+@keyframes cair {
+  to {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}

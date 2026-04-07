@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Placar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🏐 PLACAR</h1>
+
+<div class="container">
+
+  <div class="card">
+    <h2>Time A</h2>
+    <div class="pontos" id="pontosA"></div>
+    <p>Sets: <span id="setsA">0</span></p>
+
+    <button onclick="addPonto('A')">+ Ponto</button>
+    <button onclick="removerPonto('A')">- Ponto</button>
+    <button onclick="addSet('A')">+ Set</button>
+  </div>
+
+  <div class="card">
+    <h2>Time B</h2>
+    <div class="pontos" id="pontosB"></div>
+    <p>Sets: <span id="setsB">0</span></p>
+
+    <button onclick="addPonto('B')">+ Ponto</button>
+    <button onclick="removerPonto('B')">- Ponto</button>
+    <button onclick="addSet('B')">+ Set</button>
+  </div>
+
+</div>
+
+<button class="reset" onclick="zerar()">Zerar</button>
+
+<ul id="historico"></ul>
+
+<script src="script.js"></script>
+</body>
+</html>
