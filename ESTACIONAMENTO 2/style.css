@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f5f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* CONTAINER */
+.container {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    width: 360px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    border-top: 6px solid #074934; /* detalhe verde chique */
+}
+
+/* TÍTULO */
+h1 {
+    text-align: center;
+    margin: 0;
+    font-size: 32px;
+    color: #074934;
+}
+
+/* BORDÃO */
+p {
+    text-align: center;
+    margin: 0 0 20px;
+    color: #6b7280;
+}
+
+/* LABEL */
+label {
+    font-size: 14px;
+    color: #374151;
+}
+
+/* INPUTS */
+input[type="text"],
+input[type="number"],
+input[type="datetime-local"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    outline: none;
+    background: #f9fafb;
+    color: #111827;
+    margin-top: 5px;
+    transition: 0.3s;
+}
+
+/* FOCO */
+input:focus {
+    border-color: #074934;
+    box-shadow: 0 0 5px rgba(7, 73, 52, 0.3);
+}
+
+/* CHECKBOX */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* BOTÃO */
+button {
+    margin-top: 10px;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #074934;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #053b2a;
+}
+
+/* RESULTADO */
+#valor {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #074934;
+}

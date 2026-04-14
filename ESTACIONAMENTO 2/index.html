@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAGGO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+<h1>VAGGO</h1>
+<p>Gestão de estacionamento</p>
+
+<label>Digite a placa do veículo:</label>
+<input type="text" id="placa">
+
+<label>Entrada do veículo:</label>
+<input type="datetime-local" id="entrada">
+<label>Saída do veículo:</label>
+<input type="datetime-local" id="saida">
+
+<label>Tamanho do veículo:</label>
+<div class="checkbox-group">
+  <input type="checkbox" id="tamanho">
+  <span>Grande</span>
+</div>
+
+<label>Cliente frequente?</label>
+<div class="checkbox-group">
+  <input type="checkbox" id="cliente">
+  <span>Sim</span>
+</div>
+
+<button onclick="calcular()">Calcular valor</button>
+
+<span id="valor">R$ 0,00</span>
+
+</div>
+</body>
+<script src="script.js"></script>
+</html>
