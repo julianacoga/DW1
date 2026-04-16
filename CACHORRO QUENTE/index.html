@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+<h1>Velora</h1>
+<p>Gestão de pedidos</p>
+
+<p>Pedido</p>
+
+<div class="checkbox-group"></div>
+<label>Cachorro quente clássico - R$ 22,00</label>
+<input type="number" id="cachorroQuenteClassico" min="0" value="" placeholder="Qtd">
+<br>
+<label>Cachorro quente duplo - R$ 25,00</label>
+<input type="number" id="cachorroQuenteDuplo" min="0" value="" placeholder="Qtd">
+<br>
+<label>X-salada - R$ 20,00</label>
+<input type="number" id="xsalada" min="0" value="" placeholder="Qtd">
+<br>
+<label>Refrigerante 350ml - R$ 6,00</label>
+<input type="number" id="refrigerante350" min="0" value="" placeholder="Qtd">
+<br>
+<label>Refrigerante 600ml - R$ 9,00</label>
+<input type="number" id="refrigerante600" min="0" value="" placeholder="Qtd">
+<br>
+<label>Refrigerante 1L - R$ 12,00</label>
+<input type="number" id="refrigerante1" min="0" value="" placeholder="Qtd">
+<br><br>
+<button onclick="calcular()">Calcular valor</button>
+
+<span id="valor">R$ 0,00</span>
+
+</div>
+</body>
+<script src="script.js"></script>
+</html>
