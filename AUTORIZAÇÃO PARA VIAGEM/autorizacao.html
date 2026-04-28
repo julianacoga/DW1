@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Autorização para Viagem</title>
+    <style>
+        body { font-family: 'Times New Roman', serif; padding: 40px; background: #fff; }
+        article { border: 2px solid #333; padding: 40px; max-width: 700px; margin: auto; }
+        header { text-align: center; margin-bottom: 30px; }
+        h1 { text-decoration: underline; font-size: 1.8rem; }
+        p { text-align: justify; line-height: 1.8; font-size: 1.1rem; }
+        .dado-preenchido { font-weight: bold; text-transform: uppercase; }
+        footer { margin-top: 60px; text-align: center; }
+        .linha { border-top: 1px solid #000; width: 250px; margin: 10px auto; }
+    </style>
+</head>
+<body>
+    <article>
+        <header>
+            <h1>AUTORIZAÇÃO PARA VIAGEM</h1>
+        </header>
+
+        <section id="conteudo-documento">
+            <p>
+                Eu, <span id="resNomeResponsavel" class="dado-preenchido"></span>, responsável legal pelo(a) menor <span id="resNomeAluno" class="dado-preenchido"></span>, 
+                inscrito(a) sob o CPF nº <span id="resCpfAluno" class="dado-preenchido"></span>, com <span id="resIdade" class="dado-preenchido"></span> anos de idade,
+                residente na cidade de <span id="resCidadeOrigem" class="dado-preenchido"></span>,
+                autorizo sua participação e deslocamento até a cidade de <span id="resCidadeDestino" class="dado-preenchido"></span>, com a finalidade de participar de competição esportiva na modalidade <span id="resModalidade" class="dado-preenchido"></span>.
+                <br>
+                Declaro estar ciente de todas as condições da viagem, bem como das responsabilidades envolvidas durante o período do evento, isentando a organização de quaisquer responsabilidades além das previstas.
+                <br>
+                Autorizo também, em caso de necessidade, a realização de atendimentos médicos emergenciais ao(à) menor.
+                <br><br>
+                Por ser verdade, firmo a presente autorização para os devidos fins. 
+            </p>
+
+        </section>
+
+        <footer>
+            <div class="linha"></div>
+            <p>Departamento esportivo - Campo Mourão PR
+            </p>
+        </footer>
+    </article>
+
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            
+            // Atribuição semântica dos dados capturados
+            document.getElementById('resNomeAluno').textContent = urlParams.get('nomeAluno');
+            document.getElementById('resCpfAluno').textContent = urlParams.get('cpf');
+            document.getElementById('resIdade').textContent = urlParams.get('idade');
+            document.getElementById('resNomeResponsavel').textContent = urlParams.get('nomeResponsavel');
+            document.getElementById('resCidadeOrigem').textContent = urlParams.get('cidadeDeOrigem');
+            document.getElementById('resCidadeDestino').textContent = urlParams.get('cidadeDeDestino');
+            document.getElementById('resModalidade').textContent = urlParams.get('modalidade');
+        }
+    </script>
+</body>
+</html>
