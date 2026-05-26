@@ -2,7 +2,7 @@ function calcular(){
     const footer = document.getElementById('footer');
 
     let RA = parseInt(document.getElementById("inputRA").value);
-    let nome = document.getElementById("inputNome").value.trim();
+    let nome = document.getElementById("inputCateto1").value.trim();
     let n1 = parseFloat(document.getElementById("inputNota1").value);
     let n2 = parseFloat(document.getElementById("inputNota2").value);
     let n3 = parseFloat(document.getElementById("inputNota3").value);
