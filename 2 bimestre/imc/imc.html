@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sistema IMC</title>
+</head>
+
+<body>
+
+    <h1>Calculadora de IMC</h1>
+
+    <label for="enderecoServidorInput">Endereço do Servidor:</label>
+    <input type="text" id="enderecoServidorInput" value="localhost">
+    <br><br>
+
+    <label for="inputPorta">Porta:</label>
+    <input type="text" id="inputPorta" value="3000">
+    <br><br>
+
+    <label for="inputCPF">CPF:</label>
+    <input type="text" id="inputCPF" placeholder="Digite o CPF">
+    <br><br>
+
+    <label for="inputNome">Nome:</label>
+    <input type="text" id="inputNome" placeholder="Digite o nome">
+    <br><br>
+
+    <label for="inputPeso">Peso (kg):</label>
+    <input type="text" id="inputPeso" placeholder="Digite o peso">
+    <br><br>
+
+    <label for="inputAltura">Altura (m):</label>
+    <input type="text" id="inputAltura" placeholder="Digite a altura">
+    <br><br>
+
+    <button onclick="enviarMensagem()">Calcular IMC</button>
+
+    <h3>Resposta do servidor:</h3>
+    <span id="respostaDoServidor">.....</span>
+
+    <script>
+        async function enviarMensagem() {
+
+            const enderecoServidor = document.getElementById('enderecoServidorInput').value;
+            const porta = document.getElementById('inputPorta').value;
+
+            const meuPacoteDeDados = {
+                cpf: document.getElementById('inputCPF').value,
+                nome: document.getElementById('inputNome').value,
+                peso: parseFloat(document.getElementById('inputPeso').value),
+                altura: parseFloat(document.getElementById('inputAltura').value)
+            };
+
+            try {
+                const response = await fetch(`http://${enderecoServidor}:${porta}/enviar-mensagem`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(meuPacoteDeDados),
+                });
+
+                const data = await response.json();
+
+                document.getElementById("respostaDoServidor").innerHTML =
+                    `IMC: ${data.imc} <br> Classificação: ${data.classificacao}`;
+
+            } catch (error) {
+                console.error('Erro:', error);
+                alert('Erro na comunicação com o servidor');
+            }
+        }
+    </script>
+
+</body>
+
+</html>
