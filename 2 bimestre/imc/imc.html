@@ -3,11 +3,12 @@
 
 <head>
     <title>Sistema IMC</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-    <h1>Calculadora de IMC</h1>
+    <div class="container">
+    <h1>Calculadora de IMC</h1>  
 
     <label for="enderecoServidorInput">Endereço do Servidor:</label>
     <input type="text" id="enderecoServidorInput" value="localhost">
@@ -35,8 +36,12 @@
 
     <button onclick="enviarMensagem()">Calcular IMC</button>
 
+    <div class="resultado">
     <h3>Resposta do servidor:</h3>
     <span id="respostaDoServidor">.....</span>
+    </div>
+    
+    </div>
 
     <script>
         async function enviarMensagem() {

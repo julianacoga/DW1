@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:
+        radial-gradient(circle at top left, #8b5cf6, transparent 30%),
+        radial-gradient(circle at bottom right, #06b6d4, transparent 30%),
+        linear-gradient(135deg, #0f172a, #1e293b);
+    padding:20px;
+}
+
+.container{
+    width:100%;
+    max-width:550px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:28px;
+    padding:35px;
+    box-shadow:
+        0 25px 50px rgba(0,0,0,0.35),
+        inset 0 1px 0 rgba(255,255,255,0.1);
+}
+
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:30px;
+    font-size:2rem;
+    font-weight:700;
+}
+
+label{
+    display:block;
+    color:#cbd5e1;
+    margin-bottom:8px;
+    font-size:0.95rem;
+    font-weight:500;
+}
+
+input{
+    width:100%;
+    padding:14px 18px;
+    border-radius:14px;
+    border:1px solid rgba(255,255,255,0.1);
+    background:rgba(255,255,255,0.08);
+    color:white;
+    font-size:15px;
+    margin-bottom:18px;
+    transition:.3s;
+}
+
+input::placeholder{
+    color:#94a3b8;
+}
+
+input:focus{
+    outline:none;
+    border-color:#8b5cf6;
+    box-shadow:0 0 0 4px rgba(139,92,246,.25);
+}
+
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:16px;
+    background:linear-gradient(135deg,#8b5cf6,#06b6d4);
+    color:white;
+    font-size:1rem;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+    margin-top:10px;
+}
+
+button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 25px rgba(139,92,246,.4);
+}
+
+button:active{
+    transform:translateY(0);
+}
+
+.resultado{
+    margin-top:25px;
+    padding:20px;
+    border-radius:18px;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.1);
+    text-align:center;
+}
+
+h3{
+    color:white;
+    margin-bottom:15px;
+}
+
+#respostaDoServidor{
+    color:#f8fafc;
+    font-size:1.1rem;
+    line-height:1.8;
+    font-weight:500;
+}
